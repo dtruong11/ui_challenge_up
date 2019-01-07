@@ -16,7 +16,7 @@ class NavBar extends Component {
           <Nav className="mr-auto">
             <DropDown />
             <Icon style={{ color: '#B045BA' }} size={19} icon={list} />
-            <p> Pending</p>
+            <p>Pending</p>
           </Nav>
           <Nav className="ml-auto" navbar>
             <NavItem>

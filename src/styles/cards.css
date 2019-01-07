@@ -1,0 +1,12 @@
+.event_card {
+  display: inline-block;
+  text-align: center;
+}
+
+.cards_container {
+  margin-top: 2%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  min-height: 100%;
+}
