@@ -1,6 +1,9 @@
 .event_card {
   display: inline-block;
-  text-align: center;
+  text-align: left;
+  width: 260px;
+  border-radius: 2%;
+  margin-bottom: 2%;
 }
 
 .cards_container {
@@ -10,3 +13,32 @@
   justify-content: space-around;
   min-height: 100%;
 }
+
+.card_img {
+  border-radius: 2% 2% 0 0;
+}
+
+.card_info {
+  font-size: 13px;
+}
+
+.status {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.status_child {
+  margin: 0; 
+}
+
+.progress_bar {
+  position: relative;
+  height: 6px;
+}
+
+.filler {
+  background: #FFA500;
+  height: 100%;
+  transition: width .2s ease-in;
+}
+
