@@ -9,12 +9,16 @@ import { calendar } from 'react-icons-kit/entypo/calendar'
 import { list } from 'react-icons-kit/feather/list'
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     return (
       <Navbar color="light" light expand="md">
         <Container>
           <Nav className="mr-auto">
-            <DropDown />
+            <DropDown selectID={this.props.selectID} showAll={this.props.showAll}/>
             <Icon style={{ color: '#B045BA' }} size={19} icon={list} />
             <p>Pending</p>
           </Nav>

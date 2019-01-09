@@ -1,9 +1,11 @@
+/* CARDS */
 .event_card {
   display: inline-block;
   text-align: left;
   width: 260px;
   border-radius: 2%;
   margin-bottom: 2%;
+  position: relative;
 }
 
 .cards_container {
@@ -12,16 +14,42 @@
   flex-flow: row wrap;
   justify-content: space-around;
   min-height: 100%;
+  align-content: flex-start;
 }
 
 .card_img {
   border-radius: 2% 2% 0 0;
 }
 
-.card_info {
-  font-size: 13px;
+.card_footer {
+  margin: 0;
 }
 
+.card_info {
+  font-size: 13px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/* ADD A CARD */
+.add_card {
+  color: #DDDDDD;
+  border: 1px dotted #DEDEDE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  border-radius: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.add_txt {
+  color: #858585;
+}
+
+/* PROGRESS BAR IN CARD */
 .status {
   display: flex; 
   justify-content: space-between;
@@ -34,6 +62,7 @@
 .progress_bar {
   position: relative;
   height: 6px;
+  background: #E1E1E1;
 }
 
 .filler {
@@ -42,3 +71,43 @@
   transition: width .2s ease-in;
 }
 
+/* WORKFLOW STATUS */
+.live {
+  color: green;
+}
+
+.saved {
+  color: #FFA500;
+}
+
+.rejected {
+  color: red;
+}
+
+/* EDIT BUTTON */
+.edit_btn {
+  background-color: pink;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 90%;
+  left: 90%;
+}
+
+.pencil {
+  color: #FFA500;
+}
+
+/* EDIT OPTIONS */
+.edit_options {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.edit_text{
+  margin-left: 10px;
+}
