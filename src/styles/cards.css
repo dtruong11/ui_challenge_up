@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* CARDS */
 .event_card {
   display: inline-block;
   text-align: left;
   width: 260px;
   border-radius: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   position: relative;
+  min-height: 240px;
 }
 
 .cards_container {
@@ -19,17 +26,26 @@
 
 .card_img {
   border-radius: 2% 2% 0 0;
+  height: 175px;
+  background-size: cover;
+  background-position: center;
 }
 
 .card_footer {
-  margin: 0;
-}
-
-.card_info {
-  font-size: 13px;
   display: flex;
+  font-size: 13px;
+  color: #989898;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+
+.footer_icon {
+  margin-right: 6px;
+}
+
+.card_title {
+  color: #303030;
+  font-weight: bold;
 }
 
 /* ADD A CARD */
@@ -52,11 +68,15 @@
 /* PROGRESS BAR IN CARD */
 .status {
   display: flex; 
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .status_child {
   margin: 0; 
+  color: #9e9e9e;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .progress_bar {
@@ -84,30 +104,50 @@
   color: red;
 }
 
+.workflow {
+  color: #BBBBBB;
+  font-size: 11px;
+}
+
+.stat {
+  margin-right: 2%;
+}
+
+
 /* EDIT BUTTON */
 .edit_btn {
-  background-color: pink;
+  background-color: white;
   height: 20px;
   width: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  position: absolute;
-  bottom: 90%;
-  left: 90%;
 }
 
 .pencil {
   color: #FFA500;
+  margin: 0;
 }
 
 /* EDIT OPTIONS */
 .edit_options {
-  display: flex;
-  /* flex-direction: column; */
+  display: flex; 
+  flex-direction: row; 
+  color: #898989;
 }
 
 .edit_text{
-  margin-left: 10px;
+  margin-left: 15px;
+  color: #3E3E3E;
+}
+
+.edit_dropdown {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.drop_menu {
+  position:relative;
+  right: 20px;
 }

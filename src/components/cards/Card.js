@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardFooter, CardTitle } from 'reactstrap'
+import { Card, CardBody, CardFooter, CardTitle, Row, Col } from 'reactstrap'
 import ProgressBar from './ProgressBar'
 import Edit from './Edit'
 import { Icon } from 'react-icons-kit'
@@ -28,17 +28,17 @@ class SingleCard extends Component {
   checkStatus = (status) => {
     if (status === 'saved') {
       return <div>
-        <span>Saved</span>
+        <span className='stat'>Saved</span>
         <Icon icon={circle} className='saved' size={7} />
       </div>
     } else if (status === 'rejected') {
       return <div>
-        <span>Rejected</span>
+        <span className='stat'>Rejected</span>
         <Icon icon={circle} className='rejected' size={7} />
       </div>
     } else if (status === 'live') {
       return <div>
-        <span>Live</span>
+        <span className='stat'>Live</span>
         <Icon icon={circle} className='live' size={7} />
       </div>
     }
@@ -53,24 +53,21 @@ class SingleCard extends Component {
         <div>
           <div className='card_img'
             style={{
-              background: `url('${pic}'), url('https://source.unsplash.com/WLUHO9A_xik/1600x900')`,
-              height: '150px',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
+              backgroundImage: `url('${pic}'), url('https://source.unsplash.com/WLUHO9A_xik/1600x900')`,
+              // height: '175px',
+              // backgroundSize: 'cover',
+              // backgroundPosition: 'center'
             }}>
           </div>
-          {/* <div className='edit_btn'>
-            <Icon className='pencil' style={{ color: '#FFA500' }} icon={androidCreate} size={15} />
-          </div> */}
           <Edit />
         </div>
 
         <CardBody>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className='card_title'>{title}</CardTitle>
           <div>
             <div className='status'>
               <div className='status_child'>$ {quantity * price}/ Month</div>
-              <div className='status_child'>
+              <div className='workflow'>
                 {this.checkStatus(status)}
               </div>
             </div>
@@ -78,17 +75,17 @@ class SingleCard extends Component {
           </div>
         </CardBody>
         <CardFooter>
-          <div className='card_info'>
+          <div className='card_footer'>
             <div>
-              <Icon size={15} icon={database} />
+              <Icon className='footer_icon' size={15} icon={database} />
               <span>{currency} {price}</span>
             </div>
             <div>
-              <Icon size={15} icon={users} />
+              <Icon className='footer_icon' size={15} icon={users} />
               <span>{subscribers}</span>
             </div>
             <div>
-              <Icon size={15} icon={eye} />
+              <Icon className='footer_icon' size={15} icon={eye} />
               <span>{views}</span>
             </div>
           </div>
