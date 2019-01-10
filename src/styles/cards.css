@@ -199,3 +199,15 @@ body {
   margin-right: 11px;
 }
 
+
+@media (max-width: 770px) {
+  .cards_container {
+    margin-top: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    min-height: 100%;
+    align-content: flex-start;
+  }  
+}
+
