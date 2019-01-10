@@ -19,7 +19,7 @@ class NavBar extends Component {
   }
 
   currentTime = () => {
-    return moment().format("ddd, MMMM Do");
+    return moment().format("ddd, MMM Do");
   }
 
   toggle = () => {
@@ -50,7 +50,9 @@ class NavBar extends Component {
                 <Icon className='ml-4' size={15} icon={smallRight} />
               </NavItem>
               <NavItem >
-                <Badge color='danger' pill>1 d</Badge>
+                <Badge className='nav_pill' pill>
+                  <span className='pill_txt'>1 d</span>
+                </Badge>
               </NavItem>
             </Nav>
           </Collapse>

@@ -7,7 +7,6 @@ import { users } from 'react-icons-kit/feather/users'
 import { eye } from 'react-icons-kit/feather/eye'
 import { database } from 'react-icons-kit/feather/database'
 import { circle } from 'react-icons-kit/fa/circle'
-import { androidCreate } from 'react-icons-kit/ionicons/androidCreate'
 import '../../styles/cards.css'
 
 
@@ -44,9 +43,38 @@ class SingleCard extends Component {
     }
   }
 
+  footer = (status, currency, price, subscribers, views) => {
+    if (status === 'rejected') {
+      return (<CardFooter>
+        <div className='card_footer'>
+          <p className='warning'>This card is on hold</p>
+          <p>Resubmit</p>
+        </div>
+      </CardFooter>)
+    } else {
+      return (<CardFooter>
+        <div className='card_footer'>
+          <div>
+            <Icon className='footer_icon' size={15} icon={database} />
+            <span>{currency} {price}</span>
+          </div>
+          <div>
+            <Icon className='footer_icon' size={15} icon={users} />
+            <span>{subscribers}</span>
+          </div>
+          <div>
+            <Icon className='footer_icon' size={15} icon={eye} />
+            <span>{views}</span>
+          </div>
+        </div>
+      </CardFooter>)
+
+    }
+  }
+
   render() {
     let { title, views, subscribers, price, pic, currency, quantity, status, open, discard } = this.props
-    let percentage = parseFloat((open / (Math.abs(quantity - discard)) * 100).toFixed(1))
+    let percentage = parseFloat(((open + discard) / quantity * 100).toFixed(1))
 
     return (
       <Card className='event_card'>
@@ -71,22 +99,9 @@ class SingleCard extends Component {
             <ProgressBar percentage={percentage} />
           </div>
         </CardBody>
-        <CardFooter>
-          <div className='card_footer'>
-            <div>
-              <Icon className='footer_icon' size={15} icon={database} />
-              <span>{currency} {price}</span>
-            </div>
-            <div>
-              <Icon className='footer_icon' size={15} icon={users} />
-              <span>{subscribers}</span>
-            </div>
-            <div>
-              <Icon className='footer_icon' size={15} icon={eye} />
-              <span>{views}</span>
-            </div>
-          </div>
-        </CardFooter>
+       {
+         this.footer(status, currency, price, subscribers, views)
+       }
       </Card>
     )
   }

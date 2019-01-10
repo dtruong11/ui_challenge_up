@@ -12,7 +12,7 @@ export default [
     "views": 30,
     "subscribers": 0,
     "unSubscribers": 0,
-    "open": 0,
+    "open": 10,
     "discard": 0,
     "totalRevenue": 0,
     "listOfPlans": [
@@ -51,7 +51,7 @@ export default [
     "views": 30,
     "subscribers": 0,
     "unSubscribers": 0,
-    "open": 0,
+    "open": 20,
     "discard": 0,
     "totalRevenue": 0,
     "listOfPlans": [
@@ -68,7 +68,7 @@ export default [
         "description": "Seattle, Washington, USA"
       }
     ],
-    "currentWorkflow": "saved",
+    "currentWorkflow": "live",
     "campaignEndDate": "2017-02-28T18:59:59.999Z",
     "id": "c3d444c3d2774263ab93598fb0705374",
     "userId": "5d6117b9ae114c83bb53cfdd8c722e78",
@@ -107,7 +107,7 @@ export default [
         "description": "Seattle, Washington, USA"
       }
     ],
-    "currentWorkflow": "saved",
+    "currentWorkflow": "rejected",
     "campaignEndDate": "2017-02-28T18:59:59.999Z",
     "id": "c3d444c3d2774263ab93598fb0705374",
     "userId": "5d6117b9ae114c83bb53cfdd8c722e78",

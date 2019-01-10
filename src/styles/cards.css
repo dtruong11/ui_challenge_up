@@ -38,6 +38,10 @@ body {
   justify-content: space-between;
 }
 
+.warning {
+  color: #FA0701;
+}
+
 .footer_icon {
   margin-right: 6px;
 }
@@ -94,7 +98,7 @@ body {
 
 /* WORKFLOW STATUS */
 .live {
-  color: green;
+  color: #15C022;
 }
 
 .saved {
@@ -102,7 +106,7 @@ body {
 }
 
 .rejected {
-  color: red;
+  color: #FA0701;
 }
 
 .workflow {
@@ -200,6 +204,17 @@ body {
 }
 
 
+.nav_pill {
+  background-color:  #E84C3D;
+  padding: 7px 9px;
+}
+
+.pill_txt {
+  color: #F6C6C7;
+  margin: 5px 6px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 770px) {
   .cards_container {
     margin-top: 2%;
@@ -210,4 +225,5 @@ body {
     align-content: flex-start;
   }  
 }
+
 
