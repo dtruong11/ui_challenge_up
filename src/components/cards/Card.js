@@ -68,7 +68,6 @@ class SingleCard extends Component {
           </div>
         </div>
       </CardFooter>)
-
     }
   }
 
