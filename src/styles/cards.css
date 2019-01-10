@@ -10,16 +10,15 @@ body {
   text-align: left;
   width: 260px;
   border-radius: 2%;
-  margin-bottom: 4%;
+  margin-bottom: 7%;
   position: relative;
-  min-height: 240px;
 }
 
 .cards_container {
   margin-top: 2%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: 100%;
   align-content: flex-start;
 }
@@ -50,15 +49,17 @@ body {
 
 /* ADD A CARD */
 .add_card {
+  text-align: center;
   color: #DDDDDD;
-  border: 1px dotted #DEDEDE;
   display: flex;
+  border: 1px dotted #DEDEDE;
   align-items: center;
   justify-content: center;
-  width: 260px;
+  min-width: 260px;
   border-radius: 2%;
   margin-bottom: 2%;
-  text-align: center;
+  min-height: 322px;
+  margin-bottom: 7%;
 }
 
 .add_txt {
@@ -109,10 +110,15 @@ body {
   font-size: 11px;
 }
 
-.stat {
-  margin-right: 2%;
+.stat_txt {
+  padding-right: 2px;
 }
 
+.stat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 /* EDIT BUTTON */
 .edit_btn {
@@ -151,3 +157,45 @@ body {
   position:relative;
   right: 20px;
 }
+
+/* NAVBAR */
+.pending {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+}
+
+.pending_icon {
+  color: #686868;
+  margin-right: 3px;
+}
+
+.pending_txt {
+  margin: 0;
+  color: #686868;
+  font-size: 13px;
+}
+
+.navigation {
+  background-color: #F6F6F6;
+}
+
+.drop_toggle {
+  border: 1px solid #E3E3E3;
+}
+
+.drop_txt{
+  color: #4B4958;
+}
+
+
+.icon_nav {
+  color: #E74B3C;
+}
+
+.nav_items {
+  margin-right: 11px;
+}
+

@@ -26,12 +26,14 @@ class DropDown extends Component {
 
   render() {
     return (
-      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret>
-          {this.state.selected ? this.state.selected : "All Campaigns"}
+      <Dropdown size="sm" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+        <DropdownToggle color='light' className='drop_toggle' caret>
+          <span className='drop_txt'>
+            {this.state.selected ? this.state.selected : "All Campaigns"}
+          </span>
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem value='All Campaigns' 
+          <DropdownItem value='All Campaigns'
             onClick={(e) => {
               this.select(e)
               this.props.showAll()
@@ -39,13 +41,13 @@ class DropDown extends Component {
             All Campaigns
           </DropdownItem>
           {campaigns.map((el, idx) => {
-            return <DropdownItem key={idx} value={el.campaignName} 
-            onClick={(event) => {
-              this.select(event)
-              this.props.selectID(el.id)
-            }
-            }>
-            {el.campaignName}
+            return <DropdownItem key={idx} value={el.campaignName}
+              onClick={(event) => {
+                this.select(event)
+                this.props.selectID(el.id)
+              }
+              }>
+              {el.campaignName}
             </DropdownItem>
           })}
         </DropdownMenu>

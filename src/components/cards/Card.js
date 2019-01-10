@@ -27,18 +27,18 @@ class SingleCard extends Component {
 
   checkStatus = (status) => {
     if (status === 'saved') {
-      return <div>
-        <span className='stat'>Saved</span>
+      return <div className='stat'>
+        <span className='stat_txt'>Saved</span>
         <Icon icon={circle} className='saved' size={7} />
       </div>
     } else if (status === 'rejected') {
-      return <div>
-        <span className='stat'>Rejected</span>
+      return <div className='stat'>
+        <span className='stat_txt'>Rejected</span>
         <Icon icon={circle} className='rejected' size={7} />
       </div>
     } else if (status === 'live') {
-      return <div>
-        <span className='stat'>Live</span>
+      return <div className='stat'>
+        <span className='stat_txt'>Live</span>
         <Icon icon={circle} className='live' size={7} />
       </div>
     }
@@ -53,10 +53,7 @@ class SingleCard extends Component {
         <div>
           <div className='card_img'
             style={{
-              backgroundImage: `url('${pic}'), url('https://source.unsplash.com/WLUHO9A_xik/1600x900')`,
-              // height: '175px',
-              // backgroundSize: 'cover',
-              // backgroundPosition: 'center'
+              backgroundImage: `url('${pic}'), url('https://source.unsplash.com/WLUHO9A_xik/1600x900')`
             }}>
           </div>
           <Edit />
@@ -64,13 +61,13 @@ class SingleCard extends Component {
 
         <CardBody>
           <CardTitle className='card_title'>{title}</CardTitle>
-          <div>
-            <div className='status'>
-              <div className='status_child'>$ {quantity * price}/ Month</div>
-              <div className='workflow'>
-                {this.checkStatus(status)}
-              </div>
+          <div className='status'>
+            <div className='status_child'>$ {quantity * price}/ Month</div>
+            <div className='workflow'>
+              {this.checkStatus(status)}
             </div>
+          </div>
+          <div>
             <ProgressBar percentage={percentage} />
           </div>
         </CardBody>
