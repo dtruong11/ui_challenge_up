@@ -7,7 +7,7 @@ import CardList from './components/cards/CardList'
 class App extends Component {
   constructor() {
     super()
-    this.state = { 
+    this.state = {
       list,
       selectedID: ''
     }
@@ -19,27 +19,24 @@ class App extends Component {
     })
   }
 
+  // show all campaigns
   showAll = () => {
     this.setState({
       selectedID: ''
     })
   }
 
-
+  // filter campaigns based on campaignID
   filterCards = () => {
     let campId = this.state.selectedID
-    console.log('campId', campId)
-    if (campId) {
-      return list.filter(el => el.campaignId === campId)
-    } else {
-      return list
-    }
+    if (campId) return list.filter(el => el.campaignId === campId)
+    else return list
   }
 
   render() {
     return (
       <div>
-        <Navbar selectID={this.selectID} showAll={this.showAll}/>
+        <Navbar selectID={this.selectID} showAll={this.showAll} />
         <CardList list={this.filterCards()} />
       </div>
     );

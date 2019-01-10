@@ -1,0 +1,61 @@
+
+/* NAVBAR */
+.pending {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+}
+
+.pending_icon {
+  color: #686868;
+  margin-right: 3px;
+}
+
+.pending_txt {
+  color: #686868;
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
+  padding-top: 1px;
+}
+
+.navigation {
+  background-color: #F6F6F6;
+}
+
+.drop_toggle {
+  border: 1px solid #E3E3E3;
+}
+
+.drop_txt{
+  color: #4B4958;
+}
+
+.campaign_options {
+  color: #4B4958;
+  font-size: 14px;
+}
+
+.icon_nav {
+  color: #E74B3C;
+}
+
+.search_item {
+  margin-right: 11px;
+}
+
+.search_icon {
+  color: #686868;
+}
+
+.nav_pill {
+  background-color:  #E84C3D;
+  padding: 7px 9px;
+}
+
+.pill_txt {
+  color: #F6C6C7;
+  margin: 5px 6px;
+}

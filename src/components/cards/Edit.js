@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownMenu, DropdownToggle, DropdownItem, Row, Col } from 'reactstrap';
+import { Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap';
 import { Icon } from 'react-icons-kit'
 import { pencil } from 'react-icons-kit/fa/pencil'
 import { edit } from 'react-icons-kit/feather/edit'
@@ -9,19 +9,16 @@ import { share2 } from 'react-icons-kit/feather/share2'
 import '../../styles/cards.css'
 
 
-
+// EDIT DROPDOWN BUTTON 
 class Edit extends Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false
     };
   }
 
-  toggle() {
-    console.log('HELLO', this.state.dropdownOpen)
+  toggle = () => {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
@@ -34,17 +31,16 @@ class Edit extends Component {
           tag="span"
           onClick={this.toggle}
           data-toggle="dropdown"
-          aria-expanded={this.state.dropdownOpen}
-        >
+          aria-expanded={this.state.dropdownOpen}>
           <div className='edit_btn'>
-            <Icon className='pencil' style={{ color: '#FFA500' }} icon={pencil} size={13} />
+            <Icon className='pencil' icon={pencil} size={14} />
           </div>
         </DropdownToggle>
         <DropdownMenu right>
           <DropdownItem>
             <div className='edit_options'>
               <div>
-                <Icon icon={edit} size={18} />
+                <Icon icon={edit} size={20} />
               </div>
               <div className='edit_text'>
                 Edit
@@ -55,7 +51,7 @@ class Edit extends Component {
           <DropdownItem>
             <div className='edit_options'>
               <div>
-                <Icon icon={checkCircle} size={18} />
+                <Icon icon={checkCircle} size={20} />
               </div>
               <div className='edit_text'>
                 Publish
@@ -66,7 +62,7 @@ class Edit extends Component {
           <DropdownItem>
             <div className='edit_options'>
               <div>
-                <Icon icon={share2} size={18} />
+                <Icon icon={share2} size={20} />
               </div>
               <div className='edit_text'>
                 Share
@@ -77,7 +73,7 @@ class Edit extends Component {
           <DropdownItem>
             <div className='edit_options'>
               <div>
-                <Icon icon={trash2} size={18} />
+                <Icon icon={trash2} size={20} />
               </div>
               <div className='edit_text'>
                 Delete
