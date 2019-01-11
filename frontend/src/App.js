@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import list from './data/cards'
 import model from './models/requests'
 import Navbar from './components/navbar/Navbar'
 import CardList from './components/cards/CardList'

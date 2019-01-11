@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-// import campaigns from '../../data/campaigns'
 import model from '../../models/requests'
 
 
@@ -15,7 +14,7 @@ class DropDown extends Component {
   }
 
   componentDidMount = async() => {
-    let campaigns = await model.getCampaigns() // async await function returns a promise
+    let campaigns = await model.getCampaigns() 
     let data = campaigns.data.campaigns
     this.setState({
       campaigns: data 
