@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import campaigns from '../../data/campaigns'
+// import campaigns from '../../data/campaigns'
+import model from '../../models/requests'
+
 
 class DropDown extends Component {
   constructor(props) {
     super(props);
     this.state = {
       dropdownOpen: false,
-      selected: ""
+      selected: "",
+      campaigns: []
     };
+  }
+
+  componentDidMount = async() => {
+    let campaigns = await model.getCampaigns() // async await function returns a promise
+    let data = campaigns.data.campaigns
+    this.setState({
+      campaigns: data 
+    })
   }
 
   toggle = () => {
@@ -24,6 +35,7 @@ class DropDown extends Component {
   }
 
   render() {
+    let data = this.state.campaigns
     return (
       <Dropdown size="sm" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle color='light' className='drop_toggle' caret>
@@ -39,7 +51,7 @@ class DropDown extends Component {
             }}>
             All Campaigns
           </DropdownItem>
-          {campaigns.map((el, idx) => {
+          {data.map((el, idx) => {
             return (
               <DropdownItem key={idx} value={el.campaignName}
                 onClick={(event) => {
