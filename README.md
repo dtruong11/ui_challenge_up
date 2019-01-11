@@ -2,11 +2,14 @@
 
 ![dashboard](./dashboard.png)
 
-#### Technology 
+Using Trello board to break down tasks was very effective. 
+* Trello board link: https://trello.com/b/FDTHXQym/upboundui
+
+## Technology 
 * Frontend - React, Axios, MomentJS, Reactstrap 
 * Backend - NodeJS, Express
 
-#### Installation 
+## Installation 
 **Frontend** 
 * cd frontend 
 * npm install 
